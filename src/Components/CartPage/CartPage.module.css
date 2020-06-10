@@ -1,0 +1,54 @@
+.cartWrapper {
+  display: flex;
+
+  padding: 1rem;
+  margin: 1rem 10rem;
+}
+.cartLeft {
+  background-color: #fff;
+  margin-right: 2rem;
+  width: 65%;
+  padding: 1rem;
+}
+.cartRight {
+  background-color: #fff;
+  width: 35%;
+  padding: 2rem;
+}
+.hr {
+  color: #f0f0f0;
+  margin: 2rem 0;
+}
+.priceAmount {
+  display: flex;
+  justify-content: space-between;
+}
+.placeorderdiv {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  box-shadow: 0.5rem 0.5rem 0.5rem 1rem #0000001c;
+}
+.superCoinImageWrapper {
+  margin-top: 10rem;
+}
+.superCoinImage {
+  max-width: 100%;
+  max-height: 100%;
+}
+@media (max-width: 768px) {
+  .cartWrapper {
+    flex-direction: column;
+    margin: 1rem 4rem;
+  }
+  .cartLeft {
+    width: 100%;
+  }
+  .cartRight {
+    width: 100%;
+  }
+  .superCoinImageWrapper {
+    width: 30rem;
+    margin-top: 2rem;
+  }
+}

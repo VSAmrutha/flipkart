@@ -1,0 +1,13 @@
+.footerWrapper {
+  height: 6rem;
+  background-color: #212121;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footerWrapper span {
+  color: #fff;
+  margin: auto;
+  font-size: 2rem;
+}

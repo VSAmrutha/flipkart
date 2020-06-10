@@ -1,0 +1,128 @@
+.whiteButton {
+  background-color: #fff;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid #ccc;
+  color: #2874f0;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 2px;
+  height: 3rem;
+  margin: 0 2rem;
+}
+.plainButton {
+  background-color: transparent;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0 2rem;
+  border: none;
+  display: flex;
+  font-size: 1.5rem;
+}
+.plainButton:focus,
+.whiteButton:focus,
+.blueButton:focus,
+.bluePlainButton:focus,
+.addToCart:focus,
+.buyNow:focus,
+.subAddButton:focus {
+  outline: none;
+}
+.blueButton {
+  background-color: #2874f0;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid #ccc;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 2px;
+  height: 3rem;
+  margin: 1rem;
+}
+.bluePlainButton {
+  background-color: transparent;
+  color: #2874f0;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 1rem;
+  border: none;
+  display: flex;
+  font-size: 1.5rem;
+}
+.removeButton {
+  background-color: transparent;
+  color: black;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin: 1rem;
+  border: none;
+
+  font-size: 1.5rem;
+}
+.removeButton:hover {
+  color: #2874f0;
+}
+.addToCart {
+  background-color: #ff9f00;
+  padding: 2rem 3rem;
+  border: 1px solid #ccc;
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 2px;
+  /* height: 3rem; */
+  margin: 1rem;
+  width: 45%;
+}
+.buyNow {
+  background-color: #fb641b;
+  padding: 2rem 3rem;
+  border: 1px solid #ccc;
+  color: #fff;
+  font-weight: 500;
+  font-size: 2rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 2px;
+  /* height: 3rem; */
+  margin: 1rem;
+  width: 45%;
+}
+.checkButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  color: #2874f0;
+  cursor: pointer;
+  border: none;
+  font-size: 1.5rem;
+}
+.checkButton:focus {
+  outline: none;
+}
+.subAddButton {
+  border-radius: 50%;
+  background-color: transparent;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  margin: 1rem;
+}
+.numberDisplay {
+  background-color: transparent;
+  padding: 0.5rem 2rem;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .addToCart {
+    width: 95%;
+  }
+  .buyNow {
+    width: 95%;
+  }
+}

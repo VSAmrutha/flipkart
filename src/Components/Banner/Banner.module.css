@@ -1,0 +1,38 @@
+.bannerWrapper {
+  position: relative;
+  height: 60rem;
+  margin: 1rem;
+
+  background-color: #fff;
+  border-radius: 0.4rem;
+  /* overflow: hidden; */
+}
+.bannerImage {
+  width: 100%;
+  max-height: 100%;
+  display: block;
+}
+.bannerText {
+  position: absolute;
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 6rem;
+}
+.bannerText span {
+  font-size: 4rem;
+  color: #2874f0;
+}
+@media (max-width: 768px) {
+  .bannerWrapper {
+    height: auto;
+  }
+  .bannerText span {
+    font-size: 2rem;
+  }
+  .bannerText {
+    font-size: 3rem;
+  }
+}

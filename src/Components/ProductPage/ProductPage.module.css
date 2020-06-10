@@ -1,0 +1,12 @@
+.PPWrapper {
+  margin: 0 10rem;
+  background-color: #fff;
+  padding: 2rem;
+}
+@media (max-width: 768px) {
+  .PPWrapper {
+    margin: 0 3rem;
+    background-color: #fff;
+    padding: 1rem;
+  }
+}

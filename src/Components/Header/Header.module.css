@@ -1,0 +1,113 @@
+.header {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #2874f0;
+}
+.headerLeft {
+  display: flex;
+}
+.inputForm {
+  display: flex;
+  position: relative;
+  margin: auto;
+}
+.header_input {
+  padding: 0 2rem;
+  border-radius: 0.5rem;
+  border: 0;
+  outline: 0 none;
+  font-size: 2rem;
+  height: 4rem;
+  width: 100%;
+}
+.faSearch {
+  color: #2874f0;
+  position: absolute;
+  right: 1rem;
+  transform: translate(50%, 100%);
+}
+.headerLeft_logo {
+  width: 14rem;
+  margin: 0 2rem;
+}
+.headerRight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mainLoginDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.faCart {
+  margin: 0 0.5rem;
+}
+.headerShop {
+  display: flex;
+  justify-content: center;
+}
+.headerShopUL {
+  list-style: none;
+}
+.listShop {
+  margin: 1rem 8rem;
+}
+.listShopMobile {
+  margin: 1rem;
+}
+.listShopItem {
+}
+.menuItemUL {
+  list-style: none;
+}
+.arrowIcon {
+  vertical-align: middle;
+}
+.megaMenuText {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.headerRightMobile {
+  display: none;
+}
+.menuOpen {
+}
+.whiteButtonIcon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2rem;
+  margin: 0.5rem;
+}
+.headerShopMobile {
+}
+.mainLoginDivMob {
+  display: flex;
+}
+@media (max-width: 768px) {
+  .headerLeft_logo {
+    align-items: flex-start;
+  }
+  .inputForm {
+    display: none;
+  }
+  .headerRight {
+    display: none;
+  }
+  .headerRightMobile {
+    display: block;
+    position: relative;
+  }
+  .menuOpen {
+    z-index: 10;
+    background-color: #fff;
+    width: 100%;
+    padding: 2rem;
+  }
+  .headerShop {
+    display: none;
+  }
+}
