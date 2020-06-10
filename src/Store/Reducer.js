@@ -2,6 +2,7 @@ const INITIAL_STATE = {
   authType: null,
   cart: [],
   productDetail: null,
+  totalAmount: 0,
 };
 const applySetUserType = (state, action) => ({
   ...state,
@@ -15,6 +16,14 @@ const setProduct = (state, action) => ({
   ...state,
   productDetail: { ...action.data },
 });
+const addTotalAmount = (arr) => {
+  let total = 0;
+  arr.forEach((p) => {
+    total = total + p.quantityPrice;
+  });
+
+  return total;
+};
 const addToCart = (state, action) => {
   let arr = [];
   let toadd = { ...action.data };
@@ -32,7 +41,8 @@ const addToCart = (state, action) => {
     toadd.quantityPrice = toadd.price;
     arr = [...state.cart, toadd];
   }
-  return { ...state, cart: [...arr] };
+  let total = addTotalAmount(arr);
+  return { ...state, cart: [...arr], totalAmount: total };
 };
 const incrementCart = (state, action) => {
   let newItem = [...state.cart];
@@ -43,8 +53,8 @@ const incrementCart = (state, action) => {
       return p.quantity, p.quantityPrice;
     }
   });
-  console.log("newitem", newItem);
-  return { ...state, cart: [...newItem] };
+  let total = addTotalAmount(state);
+  return { ...state, cart: [...newItem], totalAmount: total };
 };
 const decrementCart = (state, action) => {
   let newItem = [...state.cart];
@@ -55,7 +65,8 @@ const decrementCart = (state, action) => {
       return p.quantity, p.quantityPrice;
     }
   });
-  return { ...state, cart: [...newItem] };
+  let total = addTotalAmount(state);
+  return { ...state, cart: [...newItem], totalAmount: total };
 };
 function authTypeReducer(state = INITIAL_STATE, action) {
   switch (action.type) {
@@ -76,6 +87,9 @@ function authTypeReducer(state = INITIAL_STATE, action) {
     }
     case "DECREMENT": {
       return decrementCart(state, action);
+    }
+    case "ADD_TOTAL_AMOUNT": {
+      return addTotalAmount(state);
     }
     case "RESET": {
       return (state = undefined);

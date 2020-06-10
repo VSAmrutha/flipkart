@@ -7,7 +7,7 @@ import Button from "../Button/Button";
 import supercoins from "../../images/super.PNG";
 
 const CartPage = (props) => {
-  const { cart, incrementHandler, decrementHandler } = props;
+  const { cart, incrementHandler, decrementHandler, totalAmount } = props;
   return (
     <div className={styles.cartWrapper}>
       <div className={styles.cartLeft}>
@@ -34,7 +34,7 @@ const CartPage = (props) => {
             Price
           </Typography>
           <Typography component="p" className="normalText">
-            379
+            {totalAmount}
           </Typography>
         </div>
         <div className={styles.priceAmount}>
@@ -51,7 +51,7 @@ const CartPage = (props) => {
             Total
           </Typography>
           <Typography component="h3" className="h3">
-            379
+            {totalAmount}
           </Typography>
         </div>
         <div className={styles.superCoinImageWrapper}>
@@ -64,6 +64,7 @@ const CartPage = (props) => {
 const mapStateToProps = (state) => {
   return {
     cart: state.cart,
+    totalAmount: state.totalAmount,
   };
 };
 const mapDispatchToProps = (dispatch) => {
