@@ -1,12 +1,12 @@
-import React,{ useState } from "react";
+import React, { useState } from "react";
 import { FaAngleUp, FaAngleDown } from "react-icons/fa";
 import styles from "./Header.module.css";
+import { Link } from "react-router-dom";
 
 export default function ShopList(props) {
   const [menuIndex, setMenuIndex] = useState(-1);
   const menuMenuClick = (index) => {
     index !== menuIndex ? setMenuIndex(index) : setMenuIndex(-1);
-    console.log(index);
   };
   const { ShopLinks, listShop } = props;
   return (
@@ -29,7 +29,16 @@ export default function ShopList(props) {
                   {item.menuItem.map((menuitem) => {
                     return (
                       <>
-                        <li className={styles.listShopItem}>{menuitem.name}</li>
+                        <Link
+                          className={styles.loginCartlink}
+                          to={{
+                            pathname: menuitem.link,
+                          }}
+                        >
+                          <li className={styles.listShopItem}>
+                            {menuitem.name}
+                          </li>{" "}
+                        </Link>
                       </>
                     );
                   })}

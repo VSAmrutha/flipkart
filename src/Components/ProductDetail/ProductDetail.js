@@ -20,7 +20,6 @@ const ProductDetail = (props) => {
     addToCartHandler,
     resetHandler,
   } = props;
-  console.log(props);
   const [pincode, setPincode] = useState("");
   const [beforePinText, setBeforePinText] = useState(false);
 

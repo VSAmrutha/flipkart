@@ -48,18 +48,32 @@
   justify-content: center;
 }
 .headerShopUL {
+  background-color: #fff;
+  width: 100%;
   list-style: none;
 }
 .listShop {
   margin: 1rem 8rem;
+  position: relative;
 }
 .listShopMobile {
   margin: 1rem;
 }
 .listShopItem {
+  font-size: 1.5rem;
+  color: black;
+  line-height: 2;
 }
+
 .menuItemUL {
   list-style: none;
+  position: absolute;
+  padding: 2rem 2rem;
+  /* width: 150px; */
+  box-shadow: none;
+  z-index: 3;
+  background-color: #fff;
+  box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem #ccc;
 }
 .arrowIcon {
   vertical-align: middle;
@@ -87,6 +101,10 @@
 .mainLoginDivMob {
   display: flex;
 }
+.loginCartlink {
+  text-decoration: none;
+  list-style: none;
+}
 @media (max-width: 768px) {
   .headerLeft_logo {
     align-items: flex-start;
@@ -104,10 +122,16 @@
   .menuOpen {
     z-index: 10;
     background-color: #fff;
-    width: 100%;
+    box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem #ccc;
     padding: 2rem;
+    position: absolute;
+    left: 10%;
+    width: 80%;
   }
   .headerShop {
     display: none;
+  }
+  .menuItemUL {
+    position: static;
   }
 }

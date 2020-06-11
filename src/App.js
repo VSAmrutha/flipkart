@@ -1,40 +1,44 @@
 import React from "react";
 import "./App.css";
 import Layout from "./Components/Layout/Layout";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Homepage from "./Components/Hompage/Homepage";
+import Login from "./Components/Login/Login";
 import Bookspage from "./Components/BooksPage/BooksPage";
 import ProductPage from "./Components/ProductPage/ProductPage";
 import CartPage from "./Components/CartPage/CartPage";
-import { Provider } from "react-redux";
-import { store, persistor } from "./Store/Store";
-import { PersistGate } from "redux-persist/integration/react";
+import { connect } from "react-redux";
 
-function App() {
-  console.log(store);
+function App({ showLogin }) {
   return (
-    <Provider store={store}>
-      <BrowserRouter>
-        <PersistGate loading={null} persistor={persistor}>
-          <div
-            style={{
-              width: "100 %",
-              overflowX: "hidden",
-            }}
-          >
-            <Layout>
-              <Switch>
-                <Route path="/" exact component={Homepage} />
-                <Route path="/books" exact component={Bookspage} />
-                <Route path="/product" exact component={ProductPage} />
-                <Route path="/cart" exact component={CartPage} />
-              </Switch>
-            </Layout>
-          </div>
-        </PersistGate>
-      </BrowserRouter>
-    </Provider>
+    <div
+      style={{
+        width: "100 %",
+        overflowX: "hidden",
+        position: "relative",
+      }}
+    >
+      <Layout>
+        <Switch>
+          <Route path="/" exact component={Homepage} />
+          <Route path="/books" exact component={Bookspage} />
+          <Route path="/product" exact component={ProductPage} />
+          <Route path="/cart" exact component={CartPage} />
+        </Switch>
+      </Layout>
+      {showLogin && <Login />}
+    </div>
   );
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    showLogin: state.showLogin,
+  };
+};
+const mapDispatchToProps = (dispatch) => {
+  return {
+    loginDetails: (data) => dispatch({ type: "LOGIN_DETAILS", data }),
+  };
+};
+export default connect(mapStateToProps, mapDispatchToProps)(App);

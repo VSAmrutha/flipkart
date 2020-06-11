@@ -24,8 +24,8 @@ export default {
     {
       name: "Books",
       menuItem: [
-        { name: "Selfhelp", link: "/" },
-        { name: "Motivational", link: "/" },
+        { name: "Selfhelp", link: "/books" },
+        // { name: "Motivational", link: "/" },
       ],
     },
   ],

@@ -3,6 +3,9 @@ const INITIAL_STATE = {
   cart: [],
   productDetail: null,
   totalAmount: 0,
+  login: {},
+  loggedIn: false,
+  showLogin: false,
 };
 const applySetUserType = (state, action) => ({
   ...state,
@@ -53,7 +56,7 @@ const incrementCart = (state, action) => {
       return p.quantity, p.quantityPrice;
     }
   });
-  let total = addTotalAmount(state);
+  let total = addTotalAmount(newItem);
   return { ...state, cart: [...newItem], totalAmount: total };
 };
 const decrementCart = (state, action) => {
@@ -65,8 +68,16 @@ const decrementCart = (state, action) => {
       return p.quantity, p.quantityPrice;
     }
   });
-  let total = addTotalAmount(state);
+  let total = addTotalAmount(newItem);
   return { ...state, cart: [...newItem], totalAmount: total };
+};
+const loginDetails = (state, action) => {
+  return { ...state, login: { ...action.data }, loggedIn: true };
+};
+const closeHandler = (state) => {
+  let loginTobe = state.showLogin;
+  loginTobe = !loginTobe;
+  return { ...state, showLogin: loginTobe };
 };
 function authTypeReducer(state = INITIAL_STATE, action) {
   switch (action.type) {
@@ -90,6 +101,12 @@ function authTypeReducer(state = INITIAL_STATE, action) {
     }
     case "ADD_TOTAL_AMOUNT": {
       return addTotalAmount(state);
+    }
+    case "LOGIN_DETAILS": {
+      return loginDetails(state, action);
+    }
+    case "SHOW_LOGIN": {
+      return closeHandler(state);
     }
     case "RESET": {
       return (state = undefined);

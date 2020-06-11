@@ -1,10 +1,10 @@
-import React,{ useState } from "react";
+import React, { useState } from "react";
 import Logo from "../../images/logoflipkart.png";
 import styles from "./Header.module.css";
 import LoginCart from "./LoginCart";
 import ShopList from "./ShopList";
 import { FaSearch, FaWater, FaWindowClose } from "react-icons/fa";
-
+import { connect } from "react-redux";
 import ShopLinks from "../Contants/headerlist.js";
 
 // function main(input) {
@@ -24,14 +24,14 @@ import ShopLinks from "../Contants/headerlist.js";
 //     p = []
 //   }
 // }
-const Header = () => {
+const Header = ({ closeHandler }) => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
   const showMobileMenuHandler = () => {
     setShowMobileMenu(!showMobileMenu);
   };
   return (
-    <header>
+    <header style={{ position: "relative" }}>
       <div className={styles.header}>
         <div className={styles.headerLeft}>
           <img src={Logo} alt="logo" className={styles.headerLeft_logo} />
@@ -52,6 +52,7 @@ const Header = () => {
             mainLoginDiv={styles.mainLoginDiv}
             loginClass="whiteButton"
             cartClass="plainButton"
+            loginClick={closeHandler}
           />
         </div>
         {/* ------------------Humberger for mobile---------------- */}
@@ -92,4 +93,15 @@ const Header = () => {
     </header>
   );
 };
-export default Header;
+
+const mapStateToProps = (state) => {
+  return {
+    showLogin: state.showLogin,
+  };
+};
+const mapDispatchToProps = (dispatch) => {
+  return {
+    closeHandler: () => dispatch({ type: "SHOW_LOGIN" }),
+  };
+};
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

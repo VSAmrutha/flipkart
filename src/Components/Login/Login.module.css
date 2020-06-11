@@ -1,0 +1,49 @@
+.loginWrapper {
+  display: flex;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  background-color: #fff;
+  width: 60%;
+  margin: auto;
+  height: 25%;
+}
+.loginLeft {
+  width: 45%;
+  background-color: #2874f0;
+  padding: 4rem;
+}
+.loginRight {
+  width: 55%;
+  padding: 4rem;
+  position: relative;
+}
+.logininput {
+  padding: 0 2rem;
+  border-radius: 0.5rem;
+  border: 0;
+  outline: 0 none;
+  font-size: 2rem;
+  height: 4rem;
+  width: 100%;
+  border-bottom: 1px solid black;
+  border-radius: 0;
+  margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+  .loginWrapper {
+    display: flex;
+    flex-direction: column;
+    height: 40%;
+    width: 80%;
+  }
+  .loginLeft {
+    width: 100%;
+  }
+  .loginRight {
+    width: 100%;
+  }
+}
