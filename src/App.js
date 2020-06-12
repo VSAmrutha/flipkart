@@ -8,6 +8,11 @@ import Bookspage from "./Components/BooksPage/BooksPage";
 import ProductPage from "./Components/ProductPage/ProductPage";
 import CartPage from "./Components/CartPage/CartPage";
 import { connect } from "react-redux";
+import bookslist from "./Components/Contants/bookslist.js";
+import kidsWear from "./Components/Contants/kidsWear.js";
+import mensTshirt from "./Components/Contants/mensTshirt.js";
+import womenDress from "./Components/Contants/womenDress.js";
+import womenSaare from "./Components/Contants/womenSaare.js";
 
 function App({ showLogin }) {
   return (
@@ -21,8 +26,32 @@ function App({ showLogin }) {
       <Layout>
         <Switch>
           <Route path="/" exact component={Homepage} />
-          <Route path="/books" exact component={Bookspage} />
-          <Route path="/product" exact component={ProductPage} />
+          <Route
+            path="/books"
+            exact
+            render={() => <Bookspage title="Books" bookslist={bookslist} />}
+          />
+          <Route
+            path="/women/saare"
+            exact
+            render={() => <Bookspage title="Saares" bookslist={womenSaare} />}
+          />
+          <Route
+            path="/women/dress"
+            exact
+            render={() => <Bookspage title="Dresses" bookslist={womenDress} />}
+          />
+          <Route
+            path="/mens/t-shirt"
+            exact
+            render={() => <Bookspage title="T-Shirts" bookslist={mensTshirt} />}
+          />
+          <Route
+            path="/kids/kidsWear"
+            exact
+            render={() => <Bookspage title="Kids Wear" bookslist={kidsWear} />}
+          />
+          <Route path="/product" exact render={() => <ProductPage />} />
           <Route path="/cart" exact component={CartPage} />
         </Switch>
       </Layout>

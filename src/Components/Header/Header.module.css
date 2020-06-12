@@ -121,6 +121,7 @@
   background-color: #fff;
   padding: 0.5rem 1rem;
   cursor: pointer;
+  font-weight: bold;
 }
 @media (max-width: 768px) {
   .headerLeft_logo {
