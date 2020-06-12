@@ -7,7 +7,15 @@ import rootReducer from "./Reducer";
 const persistConfig = {
   key: "authType",
   storage: storage,
-  whitelist: ["authType", "productDetail", "cart", "totalAmount"], // which reducer want to store
+  whitelist: [
+    "authType",
+    "productDetail",
+    "cart",
+    "totalAmount",
+    "loggedIn",
+    "showLogin",
+    "login",
+  ], // which reducer want to store
 };
 const pReducer = persistReducer(persistConfig, rootReducer);
 const middleware = applyMiddleware(thunk, logger);

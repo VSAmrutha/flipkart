@@ -4,7 +4,7 @@ import Typography from "../Typography/Typography";
 import Button from "../Button/Button";
 
 export default function CartCard(props) {
-  const { cart, incrementHandler, decrementHandler } = props;
+  const { cart, incrementHandler, decrementHandler, removeFromCart } = props;
   return (
     <>
       {cart.map((item) => {
@@ -26,9 +26,7 @@ export default function CartCard(props) {
                   >
                     -
                   </Button>
-                  <Button className="numberDisplay">
-                    {item.quantityPrice}
-                  </Button>
+                  <Button className="numberDisplay">{item.quantity}</Button>
                   <Button
                     className="subAddButton"
                     onClick={() => incrementHandler(item)}
@@ -52,10 +50,15 @@ export default function CartCard(props) {
                 {item.price && (
                   <Typography component="p" className="cartprice">
                     <span> &#8377;</span>
-                    {item.price}
+                    {item.quantityPrice}
                   </Typography>
                 )}
-                <Button className="removeButton">Remove</Button>
+                <Button
+                  className="removeButton"
+                  onClick={() => removeFromCart(item)}
+                >
+                  Remove
+                </Button>
               </div>
               <div className={styles.cartDeliveryDiv}>
                 <Typography component="p" className="deliveryMsg">

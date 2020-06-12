@@ -25,6 +25,7 @@ const Login = (props) => {
       loginDetails(login);
       setPassword("");
       setEmail("");
+      closeHandler();
     }
   };
 

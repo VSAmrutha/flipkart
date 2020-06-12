@@ -6,7 +6,7 @@ import ShopList from "./ShopList";
 import { FaSearch, FaWater, FaWindowClose } from "react-icons/fa";
 import { connect } from "react-redux";
 import ShopLinks from "../Contants/headerlist.js";
-
+import { Link } from "react-router-dom";
 // function main(input) {
 //   // Write your code here
 //   let days = 2
@@ -24,7 +24,7 @@ import ShopLinks from "../Contants/headerlist.js";
 //     p = []
 //   }
 // }
-const Header = ({ closeHandler }) => {
+const Header = ({ closeHandler, loggedIn, login, resetHandler }) => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
   const showMobileMenuHandler = () => {
@@ -34,7 +34,9 @@ const Header = ({ closeHandler }) => {
     <header style={{ position: "relative" }}>
       <div className={styles.header}>
         <div className={styles.headerLeft}>
-          <img src={Logo} alt="logo" className={styles.headerLeft_logo} />
+          <Link to="/">
+            <img src={Logo} alt="logo" className={styles.headerLeft_logo} />
+          </Link>
           <div className={styles.inputForm}>
             <input
               type="text"
@@ -53,6 +55,9 @@ const Header = ({ closeHandler }) => {
             loginClass="whiteButton"
             cartClass="plainButton"
             loginClick={closeHandler}
+            loggedIn={loggedIn}
+            login={login}
+            resetHandler={resetHandler}
           />
         </div>
         {/* ------------------Humberger for mobile---------------- */}
@@ -81,6 +86,10 @@ const Header = ({ closeHandler }) => {
             mainLoginDiv={styles.mainLoginDivMob}
             loginClass="blueButton"
             cartClass="bluePlainButton"
+            loginClick={closeHandler}
+            loggedIn={loggedIn}
+            login={login}
+            resetHandler={resetHandler}
           />
           <div className={styles.headerShopMobile}>
             <ShopList ShopLinks={ShopLinks} listShop={styles.listShopMobile} />
@@ -97,11 +106,14 @@ const Header = ({ closeHandler }) => {
 const mapStateToProps = (state) => {
   return {
     showLogin: state.showLogin,
+    login: state.login,
+    loggedIn: state.loggedIn,
   };
 };
 const mapDispatchToProps = (dispatch) => {
   return {
     closeHandler: () => dispatch({ type: "SHOW_LOGIN" }),
+    resetHandler: () => dispatch({ type: "RESET" }),
   };
 };
 export default connect(mapStateToProps, mapDispatchToProps)(Header);

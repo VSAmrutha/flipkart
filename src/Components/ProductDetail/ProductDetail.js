@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styles from "./ProductDetail.module.css";
 import Button from "../Button/Button";
 import supercoins from "../../images/super.PNG";
+import {Link} from "react-router-dom"
 import {
   FaShoppingCart,
   FaStar,
@@ -52,12 +53,20 @@ const ProductDetail = (props) => {
             </span>
             Add to Cart
           </Button>
-          <Button className="buyNow" onClick={resetHandler}>
-            <span className={styles.faIcon}>
-              <FaMoneyBillWave />
-            </span>
-            Buy Now
-          </Button>
+          <Link to="/cart">
+            {" "}
+            <Button
+              className="buyNow"
+              onClick={() => {
+                addToCartHandler(productDetail);
+              }}
+            >
+              <span className={styles.faIcon}>
+                <FaMoneyBillWave />
+              </span>
+              Buy Now
+            </Button>
+          </Link>
         </div>
       </div>
       <div className={styles.rightPDWrapper}>

@@ -7,7 +7,13 @@ import Button from "../Button/Button";
 import supercoins from "../../images/super.PNG";
 
 const CartPage = (props) => {
-  const { cart, incrementHandler, decrementHandler, totalAmount } = props;
+  const {
+    cart,
+    incrementHandler,
+    decrementHandler,
+    totalAmount,
+    removeFromCart,
+  } = props;
   return (
     <div className={styles.cartWrapper}>
       <div className={styles.cartLeft}>
@@ -19,6 +25,7 @@ const CartPage = (props) => {
           cart={cart}
           incrementHandler={incrementHandler}
           decrementHandler={decrementHandler}
+          removeFromCart={removeFromCart}
         />
         <div className={styles.placeorderdiv}>
           <Button className="buyNow">PLACE ORDER</Button>
@@ -72,6 +79,7 @@ const mapDispatchToProps = (dispatch) => {
     addToCart: (data) => dispatch({ type: "ADD_TO_CART", data }),
     incrementHandler: (data) => dispatch({ type: "INCREMENT", data }),
     decrementHandler: (data) => dispatch({ type: "DECREMENT", data }),
+    removeFromCart: (data) => dispatch({ type: "REMOVE_FROM_CART", data }),
   };
 };
 

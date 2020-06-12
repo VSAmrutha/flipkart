@@ -105,6 +105,23 @@
   text-decoration: none;
   list-style: none;
 }
+.loginWrapper {
+  position: relative;
+}
+.loginWrapper:hover .logout {
+  display: block;
+}
+.logout {
+  position: absolute;
+  top: 29px;
+  right: -10px;
+  z-index: 5;
+  display: none;
+  color: #2874f0;
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
 @media (max-width: 768px) {
   .headerLeft_logo {
     align-items: flex-start;

@@ -5,12 +5,27 @@ import Button from "../Button/Button";
 import { Link } from "react-router-dom";
 
 export default function LoginCart(props) {
-  const { loginClass, cartClass, mainLoginDiv, loginClick } = props;
+  const {
+    loginClass,
+    cartClass,
+    mainLoginDiv,
+    loginClick,
+    loggedIn,
+    login,
+    resetHandler,
+  } = props;
   return (
     <div className={mainLoginDiv}>
-      <Button className={loginClass} onClick={loginClick}>
-        Login
-      </Button>
+      <div className={styles.loginWrapper}>
+        <Button className={loginClass} onClick={!loggedIn ? loginClick : null}>
+          {loggedIn ? login.email : "Login"}
+        </Button>
+        {loggedIn ? (
+          <span className={styles.logout} onClick={resetHandler}>
+            Logout
+          </span>
+        ) : null}
+      </div>
       <Link
         className={styles.loginCartlink}
         to={{

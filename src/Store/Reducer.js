@@ -47,6 +47,11 @@ const addToCart = (state, action) => {
   let total = addTotalAmount(arr);
   return { ...state, cart: [...arr], totalAmount: total };
 };
+const removeFromCart = (state, action) => {
+  let removeProduct = state.cart.filter((item) => item.id !== action.data.id);
+  let total = addTotalAmount(removeProduct);
+  return { ...state, cart: [...removeProduct], totalAmount: total };
+};
 const incrementCart = (state, action) => {
   let newItem = [...state.cart];
   newItem.forEach((p) => {
@@ -92,6 +97,9 @@ function authTypeReducer(state = INITIAL_STATE, action) {
     }
     case "ADD_TO_CART": {
       return addToCart(state, action);
+    }
+    case "REMOVE_FROM_CART": {
+      return removeFromCart(state, action);
     }
     case "INCREMENT": {
       return incrementCart(state, action);
