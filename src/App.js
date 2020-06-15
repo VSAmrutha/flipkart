@@ -47,7 +47,7 @@ function App({ showLogin }) {
             render={() => <Bookspage title="T-Shirts" bookslist={mensTshirt} />}
           />
           <Route
-            path="/kids/kidsWear"
+            path="/kids/girls"
             exact
             render={() => <Bookspage title="Kids Wear" bookslist={kidsWear} />}
           />

@@ -104,6 +104,7 @@
 .loginCartlink {
   text-decoration: none;
   list-style: none;
+  position: relative;
 }
 .loginWrapper {
   position: relative;
@@ -122,6 +123,16 @@
   padding: 0.5rem 1rem;
   cursor: pointer;
   font-weight: bold;
+}
+.cartValue {
+  background-color: red;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  font-weight: bold;
+  position: absolute;
+  top: -13px;
+  right: -6px;
 }
 @media (max-width: 768px) {
   .headerLeft_logo {
@@ -151,5 +162,9 @@
   }
   .menuItemUL {
     position: static;
+  }
+  .cartValue {
+    top: -10px;
+    right: -10px;
   }
 }

@@ -24,7 +24,7 @@ import { Link } from "react-router-dom";
 //     p = []
 //   }
 // }
-const Header = ({ closeHandler, loggedIn, login, resetHandler }) => {
+const Header = ({ closeHandler, loggedIn, login, resetHandler, cart }) => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
   const showMobileMenuHandler = () => {
@@ -58,6 +58,7 @@ const Header = ({ closeHandler, loggedIn, login, resetHandler }) => {
             loggedIn={loggedIn}
             login={login}
             resetHandler={resetHandler}
+            cart={cart}
           />
         </div>
         {/* ------------------Humberger for mobile---------------- */}
@@ -90,6 +91,7 @@ const Header = ({ closeHandler, loggedIn, login, resetHandler }) => {
             loggedIn={loggedIn}
             login={login}
             resetHandler={resetHandler}
+            cart={cart}
           />
           <div className={styles.headerShopMobile}>
             <ShopList ShopLinks={ShopLinks} listShop={styles.listShopMobile} />
@@ -108,6 +110,7 @@ const mapStateToProps = (state) => {
     showLogin: state.showLogin,
     login: state.login,
     loggedIn: state.loggedIn,
+    cart: state.cart,
   };
 };
 const mapDispatchToProps = (dispatch) => {

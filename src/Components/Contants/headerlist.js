@@ -3,7 +3,7 @@ export default {
     {
       name: "Men",
       menuItem: [
-        { name: "Shirt", link: "/mens/t-shirt" },
+        // { name: "Shirt", link: "/mens/t-shirt" },
         { name: "T-Shirt", link: "/mens/t-shirt" },
       ],
     },
@@ -11,14 +11,14 @@ export default {
       name: "Women",
       menuItem: [
         { name: "Dress", link: "/women/dress" },
-        { name: "Saares", link: "/women/saare" },
+        // { name: "Saares", link: "/women/saare" },
       ],
     },
     {
       name: "Kids",
       menuItem: [
-        { name: "Shirt", link: "/kids/kidsWear" },
-        { name: "T-Shirt", link: "/kids/kidsWear" },
+        { name: "Girls", link: "/kids/girls" },
+        // { name: "Boys", link: "/kids/boys" },
       ],
     },
     {
