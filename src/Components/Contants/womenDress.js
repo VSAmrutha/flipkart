@@ -13,7 +13,7 @@ import wd11 from "../../images/wd11.jpg";
 export default {
   items: [
     {
-      id: "1",
+      id: "wd1",
       title: "Women Dress yellow",
       mainTitle: "Beautiful dress for Party",
       category: "womenDress",
@@ -24,7 +24,7 @@ export default {
       link: "/",
     },
     {
-      id: "2",
+      id: "wd2",
       title: "Women Dress yellow",
       mainTitle: "Beautiful dress for Party",
       category: "womenDress",
@@ -35,7 +35,7 @@ export default {
       link: "/",
     },
     {
-      id: "3",
+      id: "wd3",
       title: "Women Dress yellow",
       mainTitle: "Beautiful dress for Party",
       category: "womenDress",
@@ -46,7 +46,7 @@ export default {
       link: "/",
     },
     {
-      id: "4",
+      id: "wd4",
       title: "Women Dress yellow",
       mainTitle: "Beautiful dress for Party",
       category: "womenDress",
@@ -57,7 +57,7 @@ export default {
       link: "/",
     },
     {
-      id: "5",
+      id: "wd5",
       title: "Women Dress yellow",
       mainTitle: "Beautiful dress for Party",
       category: "womenDress",
@@ -68,7 +68,7 @@ export default {
       link: "/",
     },
     {
-      id: "6",
+      id: "wd6",
       title: "Women Dress yellow",
       mainTitle: "Beautiful dress for Party",
       category: "womenDress",
@@ -79,7 +79,7 @@ export default {
       link: "/",
     },
     {
-      id: "7",
+      id: "wd7",
       title: "Women Dress yellow",
       mainTitle: "Beautiful dress for Party",
       category: "womenDress",
@@ -90,7 +90,7 @@ export default {
       link: "/",
     },
     {
-      id: "8",
+      id: "wd8",
       title: "Women Dress yellow",
       mainTitle: "Beautiful dress for Party",
       category: "womenDress",
@@ -101,7 +101,7 @@ export default {
       link: "/",
     },
     {
-      id: "9",
+      id: "wd9",
       title: "Women Dress yellow",
       mainTitle: "Beautiful dress for Party",
       category: "womenDress",
@@ -112,7 +112,7 @@ export default {
       link: "/",
     },
     {
-      id: "10",
+      id: "wd10",
       title: "Women Dress yellow",
       mainTitle: "Beautiful dress for Party",
       category: "womenDress",
@@ -123,7 +123,7 @@ export default {
       link: "/",
     },
     {
-      id: "11",
+      id: "wd11",
       title: "Women Dress yellow",
       mainTitle: "Beautiful dress for Party",
       category: "womenDress",

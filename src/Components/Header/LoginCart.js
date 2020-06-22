@@ -39,7 +39,7 @@ export default function LoginCart(props) {
           </div>
           Cart
         </Button>
-        <span className={styles.cartValue}>{cart.length}</span>
+        <span className={styles.cartValue}>{cart ? cart.length : 0}</span>
       </Link>
     </div>
   );

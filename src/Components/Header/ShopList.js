@@ -13,10 +13,11 @@ export default function ShopList(props) {
     <>
       {ShopLinks.links.map((item, index) => {
         return (
-          <ul className={styles.headerShopUL}>
+          <ul className={styles.headerShopUL} onMouseEnter={() => menuMenuClick(index)}
+            onMouseLeave={() => setMenuIndex(-1)}>
             <li className={listShop}>
               <span
-                onClick={() => menuMenuClick(index)}
+                
                 className={styles.megaMenuText}
               >
                 {item.name}

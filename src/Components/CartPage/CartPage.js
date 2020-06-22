@@ -18,7 +18,7 @@ const CartPage = (props) => {
     <div className={styles.cartWrapper}>
       <div className={styles.cartLeft}>
         <Typography component="h3" className="h3">
-          My Cart({cart.length})
+          My Cart({cart && cart.length > 0 ? cart.length : 0})
         </Typography>
         <hr className={styles.hr} />
         <CartCard
@@ -28,7 +28,9 @@ const CartPage = (props) => {
           removeFromCart={removeFromCart}
         />
         <div className={styles.placeorderdiv}>
-          <Button className="buyNow">PLACE ORDER</Button>
+          <Button className="buyNow">
+            {cart && cart.length > 0 ? "PLACE ORDER" : "CART IS EMPTY"}
+          </Button>
         </div>
       </div>
       <div className={styles.cartRight}>
