@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+import "./index.css";
 import Layout from "./Components/Layout/Layout";
 import { Route, Switch } from "react-router-dom";
 import Homepage from "./Pages/Hompage/Homepage";
@@ -17,11 +17,7 @@ import womenSaare from "./Contants/womenSaare.js";
 function App({ showLogin }) {
   return (
     <div
-      style={{
-        width: "100 %",
-        overflowX: "hidden",
-        position: "relative",
-      }}
+    className="app"
     >
       <Layout>
         <Switch>

@@ -55,14 +55,7 @@ export default {
       image: p6,
       link: "/",
     },
-    // {
-    //   name: "Nokia Mobiles",
-    //   title: "Nokia Mobiles",
-    //   subtitle: "Min 40% Off",
-    //   text: "Nokia 6 & more",
-    //   image: p7,
-    //   link: "/",
-    // },
+
 
     // Repeat
     {

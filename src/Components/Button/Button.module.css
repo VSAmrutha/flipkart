@@ -67,7 +67,7 @@
 }
 .addToCart {
   background-color: #ff9f00;
-  padding: 2rem 3rem;
+  padding: 1rem 1rem;
   border: 1px solid #ccc;
   font-size: 2rem;
   color: #fff;
@@ -95,7 +95,7 @@
 }
 .buyNow {
   background-color: #fb641b;
-  padding: 2rem 3rem;
+  padding: 1rem 1rem;
   border: 1px solid #ccc;
   color: #fff;
   font-weight: 500;
@@ -104,7 +104,7 @@
   cursor: pointer;
   border-radius: 2px;
   /* height: 3rem; */
-  margin: 1rem;
+  margin: 0.5rem;
   width: 45%;
 }
 .checkButton {

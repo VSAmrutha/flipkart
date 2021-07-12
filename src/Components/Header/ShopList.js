@@ -38,7 +38,7 @@ export default function ShopList(props) {
                           }}
                         >
                           <li className={styles.listShopItem}>
-                            {menuitem.name}
+                            {menuitem.name} 
                           </li>{" "}
                         </Link>
                      

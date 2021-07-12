@@ -62,13 +62,13 @@
 .listShopItem {
   font-size: 1.5rem;
   color: black;
-  line-height: 2;
+  /* line-height: 1; */
 }
 
 .menuItemUL {
   list-style: none;
   position: absolute;
-  padding: 2rem 2rem;
+  padding: 0.5rem 1rem;
   /* width: 150px; */
   box-shadow: none;
   z-index: 3;
