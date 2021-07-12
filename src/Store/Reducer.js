@@ -58,7 +58,7 @@ const incrementCart = (state, action) => {
     if (p.id === action.data.id) {
       p.quantity++;
       p.quantityPrice = p.price * p.quantity;
-      return p.quantity, p.quantityPrice;
+     
     }
   });
   let total = addTotalAmount(newItem);
@@ -70,7 +70,6 @@ const decrementCart = (state, action) => {
     if (p.id === action.data.id && p.quantity > 1) {
       p.quantity--;
       p.quantityPrice = p.price * p.quantity;
-      return p.quantity, p.quantityPrice;
     }
   });
   let total = addTotalAmount(newItem);

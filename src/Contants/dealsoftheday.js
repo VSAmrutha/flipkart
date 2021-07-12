@@ -1,10 +1,10 @@
-import ms1 from "../../images/ms1.jpg";
-import ws2 from "../../images/ws2.jpg";
-import wd1 from "../../images/wd1.jpg";
-import lp1 from "../../images/lp1.jpg";
-import b1 from "../../images/b1.jpg";
-import p1 from "../../images/p2.jpg";
-import mt1 from "../../images/mt1.jpg";
+import ms1 from "../images/ms1.jpg";
+import ws2 from "../images/ws2.jpg";
+import wd1 from "../images/wd1.jpg";
+import lp1 from "../images/lp1.jpg";
+import b1 from "../images/b1.jpg";
+import p1 from "../images/p2.jpg";
+import mt1 from "../images/mt1.jpg";
 
 export default {
   items: [

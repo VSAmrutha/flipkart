@@ -1,14 +1,14 @@
-import wd1 from "../../images/wd1.jpg";
-import wd2 from "../../images/wd2.jpg";
-import wd3 from "../../images/wd3.jpg";
-import wd4 from "../../images/wd4.jpg";
-import wd5 from "../../images/wd5.jpg";
-import wd6 from "../../images/wd6.jpg";
-import wd7 from "../../images/wd7.jpg";
-import wd8 from "../../images/wd8.jpg";
-import wd9 from "../../images/wd9.jpg";
-import wd10 from "../../images/wd10.jpg";
-import wd11 from "../../images/wd11.jpg";
+import wd1 from "../images/wd1.jpg";
+import wd2 from "../images/wd2.jpg";
+import wd3 from "../images/wd3.jpg";
+import wd4 from "../images/wd4.jpg";
+import wd5 from "../images/wd5.jpg";
+import wd6 from "../images/wd6.jpg";
+import wd7 from "../images/wd7.jpg";
+import wd8 from "../images/wd8.jpg";
+import wd9 from "../images/wd9.jpg";
+import wd10 from "../images/wd10.jpg";
+import wd11 from "../images/wd11.jpg";
 
 export default {
   items: [

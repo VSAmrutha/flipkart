@@ -5,25 +5,9 @@ import LoginCart from "./LoginCart";
 import ShopList from "./ShopList";
 import { FaSearch, FaWater, FaWindowClose } from "react-icons/fa";
 import { connect } from "react-redux";
-import ShopLinks from "../Contants/headerlist.js";
+import ShopLinks from "../../Contants/headerlist.js";
 import { Link } from "react-router-dom";
-// function main(input) {
-//   // Write your code here
-//   let days = 2
-//   let pattern = [1, 1, 1, 0, 1, 1, 1, 1]
-//   outPattern = []
-//   console.log(input)
-//   for (let i = 0; i <= days; i++) {
-//     let p = []
-//     if (pattern[i - 1] !== pattern[i + 1]) {
-//       p.push(1)
-//     } else {
-//       p.push(0)
-//     }
-//     outPattern = [...p]
-//     p = []
-//   }
-// }
+
 const Header = ({ closeHandler, loggedIn, login, resetHandler, cart }) => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
@@ -41,7 +25,7 @@ const Header = ({ closeHandler, loggedIn, login, resetHandler, cart }) => {
             <input
               type="text"
               name="search"
-              value="search"
+              // value="search"
               className={styles.header_input}
             />
             <div className={styles.faSearch}>

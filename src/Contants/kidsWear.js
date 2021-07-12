@@ -1,12 +1,12 @@
-import kd1 from "../../images/kd1.jpg";
-import kd2 from "../../images/kd2.jpg";
-import kd3 from "../../images/kd3.jpg";
-import kd4 from "../../images/kd4.jpg";
-import kd5 from "../../images/kd5.jpg";
-import kd6 from "../../images/kd6.jpg";
-import kd7 from "../../images/kd7.jpg";
-import kd8 from "../../images/kd8.jpg";
-import kd9 from "../../images/kd9.jpg";
+import kd1 from "../images/kd1.jpg";
+import kd2 from "../images/kd2.jpg";
+import kd3 from "../images/kd3.jpg";
+import kd4 from "../images/kd4.jpg";
+import kd5 from "../images/kd5.jpg";
+import kd6 from "../images/kd6.jpg";
+import kd7 from "../images/kd7.jpg";
+import kd8 from "../images/kd8.jpg";
+import kd9 from "../images/kd9.jpg";
 
 export default {
   items: [

@@ -1,7 +1,7 @@
-import b5 from "../../images/b5.jpg";
-import b6 from "../../images/b6.jpg";
-import b7 from "../../images/b7.jpg";
-import b8 from "../../images/b8.jpg";
+import b5 from "../images/b5.jpg";
+import b6 from "../images/b6.jpg";
+import b7 from "../images/b7.jpg";
+import b8 from "../images/b8.jpg";
 
 export default {
   items: [

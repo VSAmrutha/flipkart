@@ -1,7 +1,7 @@
 import React from "react";
-import styles from "./Bookspage.module.css";
-import Typography from "../Typography/Typography";
-import BuyCard from "../Card/BuyCard";
+import styles from "./ProductsPage.module.css";
+import Typography from "../../Components/Typography/Typography";
+import BuyCard from "../../Components/Card/BuyCard";
 
 export default function BooksPage({ title, bookslist }) {
   return (

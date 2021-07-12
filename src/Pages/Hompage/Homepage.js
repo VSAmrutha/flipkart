@@ -1,10 +1,10 @@
 import React from "react";
-import Banner from "../Banner/Banner";
-import Card from "../Card/Card";
-import ColorCards from "../Card/ColorCards";
+import Banner from "../../Components/Banner/Banner";
+import Card from "../../Components/Card/Card";
+import ColorCards from "../../Components/Card/ColorCards";
 import bannerImage from "../../images/womenbg.jpg";
-import dealsoftheday from "../Contants/dealsoftheday.js";
-import phonedeals from "../Contants/phonedeals.js";
+import dealsoftheday from "../../Contants/dealsoftheday.js";
+import phonedeals from "../../Contants/phonedeals.js";
 
 export default function Home() {
   return (

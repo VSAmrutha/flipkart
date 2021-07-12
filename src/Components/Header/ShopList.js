@@ -13,7 +13,7 @@ export default function ShopList(props) {
     <>
       {ShopLinks.links.map((item, index) => {
         return (
-          <ul className={styles.headerShopUL} onMouseEnter={() => menuMenuClick(index)}
+          <ul key={item.name} className={styles.headerShopUL} onMouseEnter={() => menuMenuClick(index)}
             onMouseLeave={() => setMenuIndex(-1)}>
             <li className={listShop}>
               <span
@@ -29,9 +29,10 @@ export default function ShopList(props) {
                 <ul className={styles.menuItemUL}>
                   {item.menuItem.map((menuitem) => {
                     return (
-                      <>
+                      
                         <Link
                           className={styles.loginCartlink}
+                          key={menuitem.name}
                           to={{
                             pathname: menuitem.link,
                           }}
@@ -40,7 +41,7 @@ export default function ShopList(props) {
                             {menuitem.name}
                           </li>{" "}
                         </Link>
-                      </>
+                     
                     );
                   })}
                 </ul>

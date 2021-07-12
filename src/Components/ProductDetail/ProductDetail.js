@@ -25,7 +25,7 @@ const ProductDetail = (props) => {
     if (productDetail === undefined || !productDetail) {
       history.push("/");
     }
-  }, [productDetail]);
+  }, [productDetail,history]);
 
   const deliveryHandler = (e) => {
     setPincode(e.target.value);

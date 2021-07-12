@@ -1,12 +1,12 @@
-import mt1 from "../../images/mt1.jpg";
-import mt2 from "../../images/mt2.jpg";
-import mt3 from "../../images/mt3.jpg";
-import mt4 from "../../images/mt4.jpg";
-import mt5 from "../../images/mt5.jpg";
-import mt6 from "../../images/mt6.jpg";
-import mt7 from "../../images/mt7.jpg";
-import mt8 from "../../images/mt8.jpg";
-import mt9 from "../../images/mt9.jpg";
+import mt1 from "../images/mt1.jpg";
+import mt2 from "../images/mt2.jpg";
+import mt3 from "../images/mt3.jpg";
+import mt4 from "../images/mt4.jpg";
+import mt5 from "../images/mt5.jpg";
+import mt6 from "../images/mt6.jpg";
+import mt7 from "../images/mt7.jpg";
+import mt8 from "../images/mt8.jpg";
+import mt9 from "../images/mt9.jpg";
 
 export default {
   items: [

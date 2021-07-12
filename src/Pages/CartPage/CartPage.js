@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./CartPage.module.css";
-import Typography from "../Typography/Typography";
-import CartCard from "../Card/CartCard";
+import Typography from "../../Components/Typography/Typography";
+import CartCard from "../../Components/Card/CartCard";
 import { connect } from "react-redux";
-import Button from "../Button/Button";
+import Button from "../../Components/Button/Button";
 import supercoins from "../../images/super.PNG";
 
 const CartPage = (props) => {

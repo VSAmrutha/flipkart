@@ -1,7 +1,7 @@
 import React from "react";
-import ProductDetail from "../ProductDetail/ProductDetail";
-import bookslist from "../Contants/bookslist.js";
-import styles from "./ProductPage.module.css";
+import ProductDetail from "../../Components/ProductDetail/ProductDetail";
+import bookslist from "../../Contants/bookslist.js";
+import styles from "./ProductDetailPage.module.css";
 
 const ProductPage = () => {
   return (

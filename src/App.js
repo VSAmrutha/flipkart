@@ -2,17 +2,17 @@ import React from "react";
 import "./App.css";
 import Layout from "./Components/Layout/Layout";
 import { Route, Switch } from "react-router-dom";
-import Homepage from "./Components/Hompage/Homepage";
+import Homepage from "./Pages/Hompage/Homepage";
 import Login from "./Components/Login/Login";
-import Bookspage from "./Components/BooksPage/BooksPage";
-import ProductPage from "./Components/ProductPage/ProductPage";
-import CartPage from "./Components/CartPage/CartPage";
+import ProductsPage from "./Pages/ProductsPage/ProductsPage";
+import ProductDetailPage from "./Pages/ProductDetailPage/ProductDetailPage";
+import CartPage from "./Pages/CartPage/CartPage";
 import { connect } from "react-redux";
-import bookslist from "./Components/Contants/bookslist.js";
-import kidsWear from "./Components/Contants/kidsWear.js";
-import mensTshirt from "./Components/Contants/mensTshirt.js";
-import womenDress from "./Components/Contants/womenDress.js";
-import womenSaare from "./Components/Contants/womenSaare.js";
+import bookslist from "./Contants/bookslist.js";
+import kidsWear from "./Contants/kidsWear.js";
+import mensTshirt from "./Contants/mensTshirt.js";
+import womenDress from "./Contants/womenDress.js";
+import womenSaare from "./Contants/womenSaare.js";
 
 function App({ showLogin }) {
   return (
@@ -29,29 +29,29 @@ function App({ showLogin }) {
           <Route
             path="/books"
             exact
-            render={() => <Bookspage title="Books" bookslist={bookslist} />}
+            render={() => <ProductsPage title="Books" bookslist={bookslist} />}
           />
           <Route
             path="/women/saare"
             exact
-            render={() => <Bookspage title="Saares" bookslist={womenSaare} />}
+            render={() => <ProductsPage title="Saares" bookslist={womenSaare} />}
           />
           <Route
             path="/women/dress"
             exact
-            render={() => <Bookspage title="Dresses" bookslist={womenDress} />}
+            render={() => <ProductsPage title="Dresses" bookslist={womenDress} />}
           />
           <Route
             path="/mens/t-shirt"
             exact
-            render={() => <Bookspage title="T-Shirts" bookslist={mensTshirt} />}
+            render={() => <ProductsPage title="T-Shirts" bookslist={mensTshirt} />}
           />
           <Route
             path="/kids/girls"
             exact
-            render={() => <Bookspage title="Kids Wear" bookslist={kidsWear} />}
+            render={() => <ProductsPage title="Kids Wear" bookslist={kidsWear} />}
           />
-          <Route path="/product" exact render={() => <ProductPage />} />
+          <Route path="/product" exact render={() => <ProductDetailPage />} />
           <Route path="/cart" exact component={CartPage} />
         </Switch>
       </Layout>

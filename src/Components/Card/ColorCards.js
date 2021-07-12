@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Card.module.css";
-import card from "../Contants/colorlist.js";
+import card from "../../Contants/colorlist.js";
 import Typography from "../Typography/Typography";
 import classnames from "classnames";
 export default function ColorCard(props) {
@@ -8,7 +8,7 @@ export default function ColorCard(props) {
     <div className={styles.crCardWrapper}>
       {card.items.map((card, index) => {
         return (
-          <div className={styles.crCard} key={index}>
+          <div className={styles.crCard} key={card.name}>
             <a href={card.link} className={styles.crLink}>
               <div
                 className={classnames(

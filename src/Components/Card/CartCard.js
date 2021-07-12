@@ -10,8 +10,8 @@ export default function CartCard(props) {
       {cart &&
         cart.map((item) => {
           return (
-            <>
-              <div className={styles.cartCardWrapper}>
+            <div key={item.id}>
+              <div className={styles.cartCardWrapper} >
                 <div className={styles.cartimageDiv}>
                   <div className={styles.cartimageWrapper}>
                     <img
@@ -68,7 +68,7 @@ export default function CartCard(props) {
                 </div>
               </div>
               <hr className={styles.hr} />
-            </>
+            </div>
           );
         })}
     </>
